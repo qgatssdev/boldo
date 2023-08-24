@@ -1,4 +1,4 @@
-import { Theme, createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { Manrope, Open_Sans } from 'next/font/google';
 
 export const manrope = Manrope({
@@ -20,7 +20,15 @@ export const theme = responsiveFontSizes(
     palette: {
       primary: {
         main: '#0A2640',
-        light: '#777'
+        light: '#777',
+      },
+    },
+    typography: {
+      manrope: {
+        fontFamily: manrope.style.fontFamily,
+      },
+      openSans: {
+        fontFamily: openSans.style.fontFamily,
       },
     },
   })

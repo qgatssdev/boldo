@@ -1,19 +1,21 @@
-// import { CSSProperties } from 'react';
+import '@mui/material/styles';
+import '@mui/material/Typography';
 
-// interface CustomTypography {
-//   a: TypographyOptions;
-//   b: TypographyOptions;
-// }
+declare module '@mui/material/styles' {
+  interface TypographyVariants {
+    manrope: React.CSSProperties;
+    openSans: React.CSSProperties;
+  }
 
-// interface CustomThemeOptions {
-//   palette?: CustomPalette;
-//   typography?: CustomTypography;
-// }
+  interface TypographyVariantsOptions {
+    manrope?: React.CSSProperties;
+    openSans?: React.CSSProperties;
+  }
+}
 
-// declare module '@mui/material/styles' {
-//   interface Theme extends CustomThemeOptions {}
-// }
-
-// declare module '@mui/material/styles' {
-//     interface ThemeOptions extends CustomThemeOptions {}
-//   }
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    manrope: true;
+    openSans: true;
+  }
+}
