@@ -1,3 +1,4 @@
+import { RightArrow } from '@atoms/icons';
 import { serviceMock } from './service-mock';
 import {
   StyledServiceContainer,
@@ -7,6 +8,7 @@ import {
   StyledImage,
   StyledServiceWrapper,
   StyledText,
+  StyledLink,
 } from './styles';
 
 const Services = () => {
@@ -21,6 +23,12 @@ const Services = () => {
           <StyledServiceWrapper key={id}>
             <StyledImage src={service.image} alt={service.title} />
             <StyledText>{service.title}</StyledText>
+            <StyledLink>
+              Explore page
+              <span>
+                <RightArrow />
+              </span>
+            </StyledLink>
           </StyledServiceWrapper>
         ))}
       </StyledServiceMockContainer>

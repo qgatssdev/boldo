@@ -1,5 +1,4 @@
 import { styled } from '@mui/material';
-import { Typography } from '@mui/material';
 
 export const StyledHeaderContainer = styled('div')({
   marginLeft: '7%',
@@ -22,5 +21,5 @@ export const StyledListItems = styled('li')(({ theme }) => ({
   fontWeight: 600,
   color: theme.palette.primary.main,
   cursor: 'pointer',
-  // fontFamily: 'manrope'
+  fontFamily: theme.typography.manrope.fontFamily,
 }));

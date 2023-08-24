@@ -4,47 +4,43 @@ type Props = {
   transparent: boolean;
 };
 
-export const StyledSmallButton = styled('button', {
+const ButtonConstant = styled('button')(({ theme }) => ({
+  border: `2px solid ${theme.palette.primary.main}`,
+  textAlign: 'center',
+  cursor: 'pointer',
+  fontWeight: 700,
+  fontFamily: theme.typography.openSans.fontFamily,
+}));
+
+export const StyledSmallButton = styled(ButtonConstant, {
   shouldForwardProp: (prop) => prop !== 'transparent',
 })<Props>(({ theme, transparent }) => ({
-  border: `2px solid ${theme.palette.primary.main}`,
   width: '128px',
   height: '40px',
   borderRadius: '24px',
-  textAlign: 'center',
-  backgroundColor: transparent ? 'none' : theme.palette.primary.main,
+  background: transparent ? 'none' : theme.palette.primary.main,
   color: transparent ? 'none' : theme.palette.common.white,
-  cursor: 'pointer',
   fontSize: '16px',
-  fontWeight: 700,
 }));
 
-export const StyledMediumButton = styled('button', {
+export const StyledMediumButton = styled(ButtonConstant, {
   shouldForwardProp: (prop) => prop !== 'transparent',
 })<Props>(({ theme, transparent }) => ({
-  border: `2px solid ${theme.palette.primary.main}`,
   width: '187px',
   height: '60px',
   borderRadius: '56px',
-  textAlign: 'center',
   background: transparent ? 'none' : theme.palette.primary.main,
   color: transparent ? 'none' : theme.palette.common.white,
-  cursor: 'pointer',
   fontSize: '20px',
-  fontWeight: 700,
 }));
 
-export const StyledLargeButton = styled('button', {
+export const StyledLargeButton = styled(ButtonConstant, {
   shouldForwardProp: (prop) => prop !== 'transparent',
 })<Props>(({ theme, transparent }) => ({
-  border: `2px solid ${theme.palette.primary.main}`,
   width: '247px',
   height: '60px',
   borderRadius: '56px',
-  textAlign: 'center',
   background: transparent ? 'none' : theme.palette.primary.main,
   color: transparent ? 'none' : theme.palette.common.white,
-  cursor: 'pointer',
   fontSize: '20px',
-  fontWeight: 700,
 }));

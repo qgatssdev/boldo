@@ -21,6 +21,7 @@ export const StyledHeading = styled('h1')(({ theme }) => ({
   color: theme.palette.primary.main,
   lineHeight: '72px',
   maxWidth: '600px',
+  fontFamily: theme.typography.manrope.fontFamily
 }));
 
 export const StyledSubtitle = styled('p')(({ theme }) => ({
@@ -30,6 +31,7 @@ export const StyledSubtitle = styled('p')(({ theme }) => ({
   lineHeight: '28px',
   color: theme.palette.primary.light,
   maxWidth: '600px',
+  fontFamily: theme.typography.openSans.fontFamily
 }));
 
 export const StyledButtonContainer = styled('div')({
